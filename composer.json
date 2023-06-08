@@ -6,10 +6,11 @@
     "json",
     "json cache"
   ],
+  "license": "MIT",
   "authors": [
     {
       "name": "Gökhan Kurtuluş",
-      "email": "gokhankurtulus@icloud.com",
+      "email": "gokhan@gokhankurtulus.com",
       "homepage": "https://github.com/gokhankurtulus"
     }
   ],
