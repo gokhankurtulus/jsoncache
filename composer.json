@@ -1,6 +1,6 @@
 {
   "name": "gokhankurtulus/jsoncache",
-  "description": "",
+  "description": "A simple PHP caching library.",
   "keywords": [
     "cache",
     "json",
@@ -20,5 +20,8 @@
   },
   "require": {
     "php": "^8.0 || ^8.1"
+  },
+  "config": {
+    "preferred-install": "dist"
   }
 }
