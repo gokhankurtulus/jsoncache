@@ -1,0 +1,24 @@
+{
+  "name": "gokhankurtulus/jsoncache",
+  "description": "",
+  "keywords": [
+    "cache",
+    "json",
+    "json cache"
+  ],
+  "authors": [
+    {
+      "name": "Gökhan Kurtuluş",
+      "email": "gokhankurtulus@icloud.com",
+      "homepage": "https://github.com/gokhankurtulus"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "JsonCache\\": "src/JsonCache"
+    }
+  },
+  "require": {
+    "php": "^8.0 || ^8.1"
+  }
+}
