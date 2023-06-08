@@ -37,7 +37,7 @@ trait JsonCacheInitializer
     {
         if ($this->getConfig()) {
             $path = $this->getConfig()['storage_path'];
-            $forceCreatePath = $this->getConfig()['force_create_path'];
+            $forceCreatePath = $this->getConfig()['force_create_storage_path'];
             $this->setStoragePath($path, $forceCreatePath);
             return true;
         }
