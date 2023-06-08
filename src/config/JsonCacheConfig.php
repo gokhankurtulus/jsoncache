@@ -5,7 +5,7 @@
  */
 
 return [
-    'storage_path' => dirname(__DIR__) . DIRECTORY_SEPARATOR . 'storage',
+    'storage_path' => dirname(__DIR__) . DIRECTORY_SEPARATOR,
     'index_file' => 'index.json',
     'lifetime' => 60, //seconds
     'force_create_path' => true,

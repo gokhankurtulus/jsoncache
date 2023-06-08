@@ -15,7 +15,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "JsonCache\\": "src/JsonCache"
+      "JsonCache\\": "src/"
     }
   },
   "require": {

@@ -1,4 +1,4 @@
 .idea
 vendor
-src/JsonCache/storage/*
+src/storage/*
 composer.lock
