@@ -238,7 +238,7 @@ class JsonCache
      * @param bool $forceCreate
      * @throws CacheException
      */
-    public function setStoragePath(string $path, bool $forceCreate = false): void
+    protected function setStoragePath(string $path, bool $forceCreate = false): void
     {
         if (!$this->isPathExist($path)) {
             if (!$forceCreate)
@@ -261,7 +261,7 @@ class JsonCache
      * @param bool $forceCreate
      * @throws CacheException
      */
-    public function setIndexFile(string $indexFile, bool $forceCreate = false): void
+    protected function setIndexFile(string $indexFile, bool $forceCreate = false): void
     {
         if (!$this->isFileExist($indexFile)) {
             if (!$forceCreate)
@@ -298,7 +298,7 @@ class JsonCache
     /**
      * @param int $json_flags
      */
-    public function setJsonFlags(int $json_flags): void
+    protected function setJsonFlags(int $json_flags): void
     {
         $this->json_flags = $json_flags;
     }
@@ -314,7 +314,7 @@ class JsonCache
     /**
      * @param bool $compress
      */
-    public function setCompress(bool $compress): void
+    protected function setCompress(bool $compress): void
     {
         $this->compress = $compress;
     }

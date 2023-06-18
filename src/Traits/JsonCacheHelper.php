@@ -13,7 +13,7 @@ trait JsonCacheHelper
      * @param string $path
      * @return bool
      */
-    public function isPathExist(string $path): bool
+    protected function isPathExist(string $path): bool
     {
         return @is_dir($path);
     }
@@ -22,7 +22,7 @@ trait JsonCacheHelper
      * @param string $file
      * @return bool
      */
-    public function isFileExist(string $file): bool
+    protected function isFileExist(string $file): bool
     {
         return @file_exists($file);
     }
@@ -31,7 +31,7 @@ trait JsonCacheHelper
      * @param string $file
      * @return bool
      */
-    public function createFile(string $file): bool
+    protected function createFile(string $file): bool
     {
         if (!$this->isFileExist($file))
             return @touch($file);
@@ -42,7 +42,7 @@ trait JsonCacheHelper
      * @param string $path
      * @return bool
      */
-    public function createPath(string $path): bool
+    protected function createPath(string $path): bool
     {
         if (!$this->isPathExist($path))
             return @mkdir($path, 0777, true);
