@@ -96,9 +96,9 @@ $jsonCache->getJsonFlags(); // Returns config's json flags
 
 ## License
 
-Csrf is open-source software released under the [MIT License](LICENSE). Feel free to modify and use it in your projects.
+JsonCache is open-source software released under the [MIT License](LICENSE). Feel free to modify and use it in your projects.
 
 ## Contributions
 
-Contributions to Csrf are welcome! If you find any issues or have suggestions for improvements, please create an issue or submit a pull request on
+Contributions to JsonCache are welcome! If you find any issues or have suggestions for improvements, please create an issue or submit a pull request on
 the [GitHub repository](https://github.com/gokhankurtulus/jsoncache).
