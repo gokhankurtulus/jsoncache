@@ -84,13 +84,13 @@ $jsonCache->delete('my_key');
 You can also use these methods after creating an instance of `JsonCache`.
 
 ```php
-$jsonCache->getCacheSize('my_key') // Returns the size of the key in bytes
-$jsonCache->getLifetime() // Returns cache instance lifetime
-$jsonCache->setLifetime(120) // Sets cache instance lifetime to 120 seconds
+$jsonCache->getCacheSize('my_key'); // Returns the size of the key in bytes
+$jsonCache->getLifetime(); // Returns cache instance lifetime
+$jsonCache->setLifetime(120); // Sets cache instance lifetime to 120 seconds
 $jsonCache->isCompressed(); // Returns cache compress status
 $jsonCache->getConfig(); // Returns config array
-$jsonCache->getStoragePath() // Returns config's storage path
-$jsonCache->getIndexFile() // Returns config's index file path
+$jsonCache->getStoragePath(); // Returns config's storage path
+$jsonCache->getIndexFile(); // Returns config's index file path
 $jsonCache->getJsonFlags(); // Returns config's json flags
 ```
 
