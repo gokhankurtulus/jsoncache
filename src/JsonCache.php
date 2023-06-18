@@ -128,11 +128,7 @@ class JsonCache
      */
     private function saveCacheFile(string $hash, mixed $data): bool|int
     {
-        if (empty($data))
-            $data = (object)[];
-        $cacheData = @json_encode($data, $this->getJsonFlags());
-        if ($cacheData === false)
-            throw new CacheException('JSON encoding failed.');
+        $cacheData = $this->getCacheData($data);
         if ($this->isCompressed()) {
             $cacheData = @gzcompress($cacheData, 9);
             if ($cacheData === false)
@@ -177,11 +173,7 @@ class JsonCache
      */
     private function saveIndex(array $indexData = []): bool|int
     {
-        if (empty($indexData))
-            $indexData = (object)[];
-        $jsonData = @json_encode($indexData, $this->getJsonFlags());
-        if ($jsonData === false)
-            throw new CacheException('JSON encoding failed.');
+        $jsonData = $this->getCacheData($indexData);
         return @file_put_contents($this->getIndexFile(), $jsonData);
     }
 
@@ -325,5 +317,26 @@ class JsonCache
     public function setCompress(bool $compress): void
     {
         $this->compress = $compress;
+    }
+
+    /**
+     * @param mixed $data
+     * @return string
+     * @throws CacheException
+     */
+
+    private function getCacheData(mixed $data): string
+    {
+        if (empty($data))
+            $data = (object)[];
+        if (is_string($data) && json_decode($data)) {
+            $encodingData = json_decode($data);
+        } else {
+            $encodingData = $data;
+        }
+        $cacheData = @json_encode($encodingData, $this->getJsonFlags());
+        if ($cacheData === false)
+            throw new CacheException('JSON encoding failed.');
+        return $cacheData;
     }
 }
