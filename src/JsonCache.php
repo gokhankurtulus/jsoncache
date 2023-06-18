@@ -24,9 +24,18 @@ class JsonCache
     /**
      * @throws CacheException
      */
-    public function __construct()
+    public function __construct(array $config = [])
     {
-        $this->setConfig(require __DIR__ . DIRECTORY_SEPARATOR . "config/JsonCacheConfig.php");
+        $defaultConfig = [
+            'storage_path' => dirname(__DIR__) . DIRECTORY_SEPARATOR . 'storage',
+            'index_file' => 'index.json',
+            'lifetime' => 60, //seconds
+            'force_create_storage_path' => true,
+            'force_create_index_file' => true,
+            'json_flags' => JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES,
+            'compress' => true
+        ];
+        $this->setConfig(array_merge($defaultConfig, $config));
         $this->initializeStoragePath();
         $this->initializeIndexFile();
         $this->initializeLifeTime();
