@@ -1,10 +1,11 @@
 {
   "name": "gokhankurtulus/jsoncache",
   "description": "A simple PHP caching library.",
+  "type": "library",
   "keywords": [
     "cache",
     "json",
-    "json cache"
+    "jsoncache"
   ],
   "license": "MIT",
   "authors": [
@@ -20,7 +21,8 @@
     }
   },
   "require": {
-    "php": "^8.0 || ^8.1"
+    "php": "^8.0 || ^8.1",
+    "ext-zlib": "*"
   },
   "config": {
     "preferred-install": "dist"
