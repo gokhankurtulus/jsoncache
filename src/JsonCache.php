@@ -121,6 +121,18 @@ class JsonCache
     }
 
     /**
+     * @return bool
+     */
+    public function clear(): bool
+    {
+        $files = glob($this->getStoragePath() . '/*.json');
+        foreach ($files as $file) {
+            if (is_file($file)) unlink($file);
+        }
+        return true;
+    }
+
+    /**
      * @param string $hash
      * @param mixed $data
      * @return bool|int
