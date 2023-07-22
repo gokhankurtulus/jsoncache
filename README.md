@@ -79,6 +79,14 @@ To remove a key from the cache, use the `delete` method.
 $jsonCache->delete('my_key');
 ```
 
+### Clear Cache
+
+To clear cache, use the `clear` method.
+
+```php
+$jsonCache->clear();
+```
+
 ### Methods
 
 You can also use these methods after creating an instance of `JsonCache`.
